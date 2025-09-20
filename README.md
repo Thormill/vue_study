@@ -1,16 +1,80 @@
-# Vue 3 + Vite
+# 🦦 Vue Expense Tracker (Vue 3 + Vite + Yarn)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Учебное приложение для тренировки Vue 3, компонентов и стора (Pinia).\
+Запускается локально или в Docker, поддерживает TypeScript-typecheck в
+CI.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+------------------------------------------------------------------------
 
-# Running in docker:
-`docker-compose up web` to run;
-`docker-compose stop` to stop;
+## 🚀 Быстрый старт (локально)
 
-# Installing packages in docker:
-`docker-compose exec web yarn` - runs yarn in docker to install packages from package.json
-`docker-compose exec web yarn add %package-name%` - runs yarn in docker to add %package-name% to package.json and install it
+1.  Установи зависимости:
 
-# Host and port
-http://localhost:5173
+    ``` bash
+    yarn install
+    ```
+
+2.  Запусти дев-сервер:
+
+    ``` bash
+    yarn dev
+    ```
+
+3.  Открой в браузере:\
+    👉 <http://localhost:5173>
+
+------------------------------------------------------------------------
+
+## 🐳 Работа через Docker
+
+1.  Запуск контейнера:
+
+    ``` bash
+    docker-compose up web
+    ```
+
+    Приложение будет доступно на <http://localhost:5173>
+
+2.  Остановка контейнера:
+
+    ``` bash
+    docker-compose stop
+    ```
+
+3.  Установка пакетов (внутри контейнера):
+
+    ``` bash
+    docker-compose exec web yarn
+    docker-compose exec web yarn add <package-name>
+    ```
+
+------------------------------------------------------------------------
+
+## 🧩 Основные команды Yarn
+
+-   `yarn dev` --- запуск дев-сервера с hot-reload\
+-   `yarn build` --- собрать production-бандл\
+-   `yarn preview` --- протестировать сборку локально\
+-   `yarn typecheck` --- проверить TypeScript-типы (`vue-tsc`)
+
+------------------------------------------------------------------------
+
+## 📂 Полезные ссылки
+
+-   [Vue 3 --- Script
+    Setup](https://v3.vuejs.org/api/sfc-script-setup.html)\
+-   [Pinia (Vue Store)](https://pinia.vuejs.org/)\
+-   [Vite Docs](https://vitejs.dev/guide/)\
+-   [Chart.js](https://www.chartjs.org/docs/latest/) --- библиотека для
+    графиков
+
+------------------------------------------------------------------------
+
+## 🎯 Учебные задачи для практики
+
+-   Добавление новых категорий расходов
+-   Рредактирование расходов прямо в таблице
+-   Экспорт расходов в CSV
+-   Переключение валют (USD/EUR/CAD)\
+-   Валидацию: сумма > 0, не более 2 знаков после запятой
+-   Долги
