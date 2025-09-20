@@ -1,0 +1,27 @@
+{
+  "name": "Vue Expense Tracker",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "web",
+  "workspaceFolder": "/app",
+  "overrideCommand": false,
+  "postCreateCommand": "corepack enable && yarn install --frozen-lockfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "vue.inlayHints.optionsWrapper": false
+      }
+    }
+  },
+  "remoteUser": "node"
+}
